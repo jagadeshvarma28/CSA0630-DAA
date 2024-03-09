@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+#include <string.h>
+
+
+
+
+
+void reversePrint(char *str) {
+
+    if (*str) {
+
+        reversePrint(str + 1);
+
+        printf("%c", *str);
+
+    }
+
+}
+
+
+
+int main() {
+
+    char str[] = "Hello, World!";
+
+    printf("Original String: %s\n", str);
+
+    printf("Reversed String: ");
+
+    reversePrint(str);
+
+    printf("\n");
+
+    return 0;
+
+}
+
